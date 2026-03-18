@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "B/11PHYh/gE=",
+  "success": true,
+  "projectFilePath": "/Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/Mission11_Heaton/Mission11_Heaton.csproj",
+  "expectedPackageFiles": [
+    "/Users/luke/.nuget/packages/microsoft.aspnetcore.openapi/10.0.1/microsoft.aspnetcore.openapi.10.0.1.nupkg.sha512",
+    "/Users/luke/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
