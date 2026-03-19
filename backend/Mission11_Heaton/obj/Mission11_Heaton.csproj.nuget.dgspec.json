@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/Mission11_Heaton/Mission11_Heaton.csproj": {}
+    "/Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/Mission11_Heaton.csproj": {}
   },
   "projects": {
-    "/Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/Mission11_Heaton/Mission11_Heaton.csproj": {
+    "/Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/Mission11_Heaton.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/Mission11_Heaton/Mission11_Heaton.csproj",
+        "projectUniqueName": "/Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/Mission11_Heaton.csproj",
         "projectName": "Mission11_Heaton",
-        "projectPath": "/Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/Mission11_Heaton/Mission11_Heaton.csproj",
+        "projectPath": "/Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/Mission11_Heaton.csproj",
         "packagesPath": "/Users/luke/.nuget/packages/",
-        "outputPath": "/Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/Mission11_Heaton/obj/",
+        "outputPath": "/Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/luke/.nuget/NuGet/NuGet.Config"
@@ -47,6 +47,26 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[10.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.4, )"
             }
           },
           "imports": [
