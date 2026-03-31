@@ -1,14 +1,19 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BookList from './BookList'
-import { CartProvider } from './CartContext'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import BookList from './BookList';
+import AdminBooks from './Adminbooks';
+import { CartProvider } from './CartContext';
 
 function App() {
   return (
     <CartProvider>
-      <div>
-        <BookList />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<BookList />} />
+          <Route path="/adminbooks" element={<AdminBooks />} />
+        </Routes>
+      </BrowserRouter>
     </CartProvider>
   )
 }

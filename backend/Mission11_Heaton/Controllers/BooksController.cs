@@ -24,13 +24,9 @@ public class BooksController : ControllerBase
     {
         var query = _context.Books.AsQueryable();
 
-        // Filter by category if provided
         if (!string.IsNullOrEmpty(category))
-        {
             query = query.Where(b => b.Category == category);
-        }
 
-        // Sort by title
         query = sortOrder == "desc"
             ? query.OrderByDescending(b => b.Title)
             : query.OrderBy(b => b.Title);
@@ -62,5 +58,50 @@ public class BooksController : ControllerBase
             .ToListAsync();
 
         return Ok(categories);
+    }
+
+    // CREATE
+    [HttpPost]
+    public async Task<IActionResult> AddBook([FromBody] Book book)
+    {
+        _context.Books.Add(book);
+        await _context.SaveChangesAsync();
+        return CreatedAtAction(nameof(GetBooks), new { id = book.BookId }, book);
+    }
+
+    // UPDATE
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateBook(int id, [FromBody] Book book)
+    {
+        if (id != book.BookId)
+            return BadRequest("ID mismatch");
+
+        _context.Entry(book).State = EntityState.Modified;
+
+        try
+        {
+            await _context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!_context.Books.Any(b => b.BookId == id))
+                return NotFound();
+            throw;
+        }
+
+        return NoContent();
+    }
+
+    // DELETE
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteBook(int id)
+    {
+        var book = await _context.Books.FindAsync(id);
+        if (book == null)
+            return NotFound();
+
+        _context.Books.Remove(book);
+        await _context.SaveChangesAsync();
+        return NoContent();
     }
 }

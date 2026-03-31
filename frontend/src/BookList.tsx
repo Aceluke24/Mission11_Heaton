@@ -6,6 +6,8 @@ import { Toast } from 'bootstrap';
 // Bootstrap JS for Offcanvas and Toast
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+const API = 'https://mission13-backend-hvbwgmb4ehh8akc7.francecentral-01.azurewebsites.net/books';
+
 function BookList() {
   const [data, setData] = useState<BooksResponse | null>(null);
   const [page, setPage] = useState(1);
@@ -21,7 +23,7 @@ function BookList() {
 
   // Fetch categories once
   useEffect(() => {
-    fetch('https://localhost:5000/books/categories')
+    fetch(API + '/categories')
       .then((r) => r.json())
       .then(setCategories);
   }, []);
@@ -34,7 +36,7 @@ function BookList() {
       sortOrder,
       ...(category ? { category } : {}),
     });
-    fetch(`https://localhost:5000/books?${params}`)
+    fetch(`${API}?${params}`)
       .then((r) => r.json())
       .then(setData);
   }, [page, pageSize, sortOrder, category]);

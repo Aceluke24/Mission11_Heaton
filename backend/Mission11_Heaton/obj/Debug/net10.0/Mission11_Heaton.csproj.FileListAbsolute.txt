@@ -147,3 +147,4 @@
 /Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/obj/Debug/net10.0/Mission11_Heaton.pdb
 /Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/obj/Debug/net10.0/Mission11_Heaton.genruntimeconfig.cache
 /Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/obj/Debug/net10.0/ref/Mission11_Heaton.dll
+/Users/luke/RiderProjects/Mission11_Heaton/backend/Mission11_Heaton/bin/Debug/net10.0/Bookstore.sqlite
