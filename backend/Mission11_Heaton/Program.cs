@@ -13,12 +13,15 @@ builder.Services.AddDbContext<BookstoreContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("BookConnection")));
 
 builder.Services.AddCors(options =>
-    options.AddPolicy("AllowReactApp",
-    policy =>{
-        policy.WithOrigins("http://localhost:3000")
-            .AllowAnyMethod()
-            .AllowAnyHeader();
-        }));
+    options.AddPolicy("AllowReactApp", policy =>
+    {
+        policy.WithOrigins(
+            "http://localhost:3000",
+            "https://polite-mushroom-07cc9621e.2.azurestaticapps.net"
+        )
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+    }));
 
 var app = builder.Build();
 
